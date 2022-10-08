@@ -6,6 +6,14 @@
         console.log(`${client.user.tag} 準備好上戰場惹！`) ;
     }) ;
 
+
+client.on('message', msg => {
+    if (msg.content === 'ping') {
+        msg.reply('pong');
+    }
+
+});
+
     client.on('message',msg=>{
         if(msg.content.startsWith(settings.prefix+'test')){
             msg.channel.send('test committed') ;
